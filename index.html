@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Advocate [Your Father's Name] - Premier Legal Services</title>
+    <title>Advocate Muhammad Ashraf Qureshi - Asian Star Law Firm</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -30,7 +30,6 @@
             background: var(--light);
             line-height: 1.7;
             overflow-x: hidden;
-            padding-bottom: 80px; /* Space for bottom nav */
         }
         
         /* Animated Background Particles */
@@ -61,10 +60,77 @@
             75% { transform: translateY(-100px) translateX(-80px); }
         }
         
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(10, 22, 40, 0.98);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            padding: 1rem 1.5rem;
+        }
+        
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            color: var(--accent);
+            font-weight: 700;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+            align-items: center;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+        }
+        
+        .nav-links a:hover {
+            color: var(--accent);
+            background: rgba(212, 175, 55, 0.1);
+        }
+        
+        /* Mobile Menu Toggle */
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 4px;
+        }
+        
+        .menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background: var(--accent);
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+        
         /* Hero Header */
         header {
             position: relative;
-            background: linear-gradient(135deg, #0a1628 0%, #1a2942 50%, #2c3e50 100%);
+            background: linear-gradient(135deg, #000000 0%, #0a1628 50%, #1a2942 100%);
             color: white;
             padding: 0;
             min-height: 100vh;
@@ -72,6 +138,7 @@
             align-items: center;
             justify-content: center;
             overflow: hidden;
+            margin-top: 70px;
         }
         
         .hero-overlay {
@@ -95,36 +162,28 @@
             position: relative;
             z-index: 2;
             text-align: center;
-            max-width: 1000px;
-            padding: 4rem 2rem;
+            max-width: 900px;
+            padding: 2rem 1.5rem;
         }
         
         .hero-badge {
             display: inline-block;
-            padding: 0.8rem 2rem;
+            padding: 0.6rem 1.5rem;
             background: rgba(212, 175, 55, 0.15);
             border: 2px solid var(--accent);
             border-radius: 50px;
             color: var(--accent);
-            font-size: 0.9rem;
+            font-size: 0.75rem;
             font-weight: 600;
-            letter-spacing: 3px;
+            letter-spacing: 2px;
             text-transform: uppercase;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
             animation: fadeInDown 1s ease-out;
-            transition: all 0.4s ease;
-        }
-        
-        .hero-badge:hover {
-            background: var(--accent);
-            color: var(--primary);
-            transform: scale(1.05);
-            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
         }
         
         .scales-icon {
-            font-size: 6rem;
-            margin-bottom: 1.5rem;
+            font-size: 4rem;
+            margin-bottom: 1rem;
             animation: scaleRotate 2s ease-out;
             display: inline-block;
             filter: drop-shadow(0 10px 30px rgba(212, 175, 55, 0.5));
@@ -143,15 +202,13 @@
         
         h1 {
             font-family: 'Playfair Display', serif;
-            font-size: 4.5rem;
+            font-size: 2.5rem;
             font-weight: 900;
             margin-bottom: 1rem;
-            letter-spacing: 2px;
+            letter-spacing: 1px;
             animation: fadeInUp 1s ease-out 0.3s both;
-            background: linear-gradient(135deg, #ffffff 0%, var(--accent) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            color: #ffffff;
+            text-shadow: 0 2px 10px rgba(212, 175, 55, 0.3);
         }
         
         @keyframes fadeInDown {
@@ -177,35 +234,35 @@
         }
         
         .hero-subtitle {
-            font-size: 1.4rem;
-            color: rgba(255, 255, 255, 0.9);
-            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            color: #ffffff;
+            margin-bottom: 0.8rem;
             animation: fadeInUp 1s ease-out 0.5s both;
             font-weight: 300;
         }
         
         .hero-tagline {
-            font-size: 1.1rem;
+            font-size: 0.9rem;
             color: var(--accent);
             font-weight: 600;
-            letter-spacing: 4px;
+            letter-spacing: 3px;
             text-transform: uppercase;
             animation: fadeInUp 1s ease-out 0.7s both;
         }
         
         .hero-cta {
-            margin-top: 3rem;
+            margin-top: 2rem;
             animation: fadeInUp 1s ease-out 0.9s both;
         }
         
         .cta-button {
             display: inline-block;
-            padding: 1.3rem 3rem;
+            padding: 1rem 2.5rem;
             background: var(--accent);
             color: var(--primary);
             text-decoration: none;
             font-weight: 700;
-            font-size: 1.1rem;
+            font-size: 0.9rem;
             border-radius: 50px;
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             text-transform: uppercase;
@@ -215,24 +272,6 @@
             box-shadow: 0 10px 40px rgba(212, 175, 55, 0.3);
         }
         
-        .cta-button::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 0;
-            height: 0;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.3);
-            transition: width 0.6s, height 0.6s, top 0.6s, left 0.6s;
-            transform: translate(-50%, -50%);
-        }
-        
-        .cta-button:hover::before {
-            width: 400px;
-            height: 400px;
-        }
-        
         .cta-button:hover {
             transform: translateY(-5px);
             box-shadow: 0 20px 60px rgba(212, 175, 55, 0.5);
@@ -240,7 +279,7 @@
         
         .scroll-indicator {
             position: absolute;
-            bottom: 3rem;
+            bottom: 2rem;
             left: 50%;
             transform: translateX(-50%);
             animation: bounce 2s infinite;
@@ -258,69 +297,11 @@
             color: var(--accent);
         }
         
-        /* Bottom Navigation - Mobile First */
-        nav {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            background: rgba(255, 255, 255, 0.98);
-            backdrop-filter: blur(10px);
-            box-shadow: 0 -5px 30px rgba(0, 0, 0, 0.1);
-            z-index: 1000;
-            transition: all 0.3s ease;
-        }
-        
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            margin: 0;
-            padding: 0;
-        }
-        
-        nav li {
-            flex: 1;
-            text-align: center;
-        }
-        
-        nav a {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 0.8rem 0.5rem;
-            color: var(--text);
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            position: relative;
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-        
-        nav a .nav-icon {
-            font-size: 1.5rem;
-            margin-bottom: 0.3rem;
-            transition: all 0.3s ease;
-        }
-        
-        nav a:hover,
-        nav a.active {
-            color: var(--accent);
-        }
-        
-        nav a:hover .nav-icon,
-        nav a.active .nav-icon {
-            transform: scale(1.2);
-        }
-        
         /* Main Container */
         .container {
             max-width: 1400px;
             margin: 0 auto;
-            padding: 4rem 1.5rem;
+            padding: 3rem 1.5rem;
             position: relative;
             z-index: 1;
         }
@@ -330,13 +311,13 @@
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 1rem;
-            margin-bottom: 4rem;
+            margin-bottom: 3rem;
         }
         
         .stat-card {
             background: white;
-            padding: 2rem 1rem;
-            border-radius: 20px;
+            padding: 1.5rem 1rem;
+            border-radius: 15px;
             text-align: center;
             box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -366,7 +347,7 @@
         }
         
         .stat-icon {
-            font-size: 2.5rem;
+            font-size: 2rem;
             margin-bottom: 0.5rem;
             display: inline-block;
             transition: all 0.4s ease;
@@ -377,7 +358,7 @@
         }
         
         .stat-number {
-            font-size: 2.2rem;
+            font-size: 1.8rem;
             font-weight: 900;
             color: var(--accent);
             font-family: 'Playfair Display', serif;
@@ -385,7 +366,7 @@
         }
         
         .stat-label {
-            font-size: 0.8rem;
+            font-size: 0.7rem;
             color: var(--text-light);
             text-transform: uppercase;
             letter-spacing: 1px;
@@ -395,9 +376,9 @@
         /* About Section */
         .about-section {
             background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
-            border-radius: 30px;
-            padding: 3rem 2rem;
-            margin-bottom: 4rem;
+            border-radius: 20px;
+            padding: 2.5rem 1.5rem;
+            margin-bottom: 3rem;
             box-shadow: 0 20px 80px rgba(0, 0, 0, 0.08);
             position: relative;
             overflow: hidden;
@@ -408,28 +389,28 @@
             position: absolute;
             top: -3rem;
             right: -3rem;
-            font-size: 15rem;
+            font-size: 12rem;
             opacity: 0.03;
             transform: rotate(-15deg);
         }
         
         .section-header {
             text-align: center;
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;
         }
         
         .section-subtitle {
             color: var(--accent);
             font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 3px;
-            font-size: 0.8rem;
-            margin-bottom: 1rem;
+            letter-spacing: 2px;
+            font-size: 0.7rem;
+            margin-bottom: 0.8rem;
         }
         
         .section-title {
             font-family: 'Playfair Display', serif;
-            font-size: 2.5rem;
+            font-size: 2rem;
             color: var(--primary);
             margin-bottom: 1rem;
             position: relative;
@@ -439,11 +420,11 @@
         .section-title::after {
             content: '';
             position: absolute;
-            bottom: -15px;
+            bottom: -10px;
             left: 50%;
             transform: translateX(-50%);
-            width: 120px;
-            height: 4px;
+            width: 100px;
+            height: 3px;
             background: linear-gradient(90deg, transparent, var(--accent), transparent);
         }
         
@@ -463,39 +444,21 @@
             margin: 0 auto;
         }
         
-        .profile-image-wrapper:hover {
-            transform: translateY(-10px);
-        }
-        
         .profile-image {
             width: 100%;
+            max-width: 350px;
             aspect-ratio: 3/4;
             background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
-            border-radius: 20px;
+            border-radius: 15px;
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
-            font-size: 5rem;
+            font-size: 4rem;
             box-shadow: 0 20px 60px rgba(10, 22, 40, 0.3);
             position: relative;
             overflow: hidden;
-        }
-        
-        .profile-image::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-            transform: rotate(45deg);
-            transition: all 0.6s ease;
-        }
-        
-        .profile-image-wrapper:hover .profile-image::before {
-            left: 100%;
+            margin: 0 auto;
         }
         
         .profile-badge {
@@ -504,17 +467,17 @@
             right: -10px;
             background: var(--accent);
             color: var(--primary);
-            padding: 0.8rem 1.2rem;
-            border-radius: 15px;
+            padding: 0.6rem 1rem;
+            border-radius: 10px;
             font-weight: 700;
-            font-size: 0.75rem;
+            font-size: 0.65rem;
             box-shadow: 0 10px 30px rgba(212, 175, 55, 0.4);
             animation: float 3s ease-in-out infinite;
         }
         
         .profile-details h3 {
             font-family: 'Playfair Display', serif;
-            font-size: 2rem;
+            font-size: 1.6rem;
             color: var(--primary);
             margin-bottom: 0.5rem;
         }
@@ -523,15 +486,15 @@
             color: var(--accent);
             font-weight: 700;
             margin-bottom: 1.5rem;
-            font-size: 1rem;
-            letter-spacing: 1px;
+            font-size: 0.85rem;
+            letter-spacing: 0.5px;
         }
         
         .bio p {
             line-height: 1.8;
             margin-bottom: 1rem;
             color: var(--text-light);
-            font-size: 0.95rem;
+            font-size: 0.85rem;
         }
         
         .expertise {
@@ -539,7 +502,7 @@
         }
         
         .expertise h4 {
-            font-size: 1.6rem;
+            font-size: 1.4rem;
             color: var(--primary);
             margin-bottom: 1.5rem;
             font-family: 'Playfair Display', serif;
@@ -547,58 +510,34 @@
         
         .expertise-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1rem;
+            grid-template-columns: 1fr;
+            gap: 0.8rem;
         }
         
         .expertise-card {
-            padding: 1.5rem 1rem;
+            padding: 1.2rem 1rem;
             background: white;
-            border-radius: 15px;
+            border-radius: 12px;
             border-left: 4px solid var(--accent);
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .expertise-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 4px;
-            height: 100%;
-            background: var(--accent);
-            transform: scaleY(0);
-            transition: transform 0.4s ease;
-        }
-        
-        .expertise-card:hover::before {
-            transform: scaleY(1);
         }
         
         .expertise-card:hover {
             transform: translateX(5px);
             box-shadow: 0 15px 40px rgba(212, 175, 55, 0.15);
-            border-left-color: transparent;
         }
         
         .expertise-icon {
-            font-size: 2rem;
+            font-size: 1.8rem;
             margin-bottom: 0.5rem;
             display: block;
-            transition: all 0.3s ease;
-        }
-        
-        .expertise-card:hover .expertise-icon {
-            transform: scale(1.15);
         }
         
         .expertise-title {
             font-weight: 700;
             color: var(--primary);
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             line-height: 1.4;
         }
         
@@ -606,26 +545,11 @@
         .contact-section {
             background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
             color: white;
-            border-radius: 30px;
-            padding: 3rem 2rem;
+            border-radius: 20px;
+            padding: 2.5rem 1.5rem;
             box-shadow: 0 30px 100px rgba(10, 22, 40, 0.3);
             position: relative;
             overflow: hidden;
-        }
-        
-        .contact-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 300px;
-            height: 300px;
-            background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
-            border-radius: 50%;
-        }
-        
-        .contact-section .section-title {
-            color: white;
         }
         
         .form-container {
@@ -636,7 +560,7 @@
         .form-grid {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 1.5rem;
+            gap: 1.2rem;
             margin-top: 2rem;
         }
         
@@ -651,30 +575,24 @@
         }
         
         label {
-            margin-bottom: 0.6rem;
+            margin-bottom: 0.5rem;
             font-weight: 600;
             color: var(--accent);
-            font-size: 0.85rem;
+            font-size: 0.75rem;
             text-transform: uppercase;
             letter-spacing: 1px;
-            transition: all 0.3s ease;
-        }
-        
-        .form-group:focus-within label {
-            color: #fff;
-            transform: translateX(5px);
         }
         
         input, textarea, select {
-            padding: 1rem 1.2rem;
+            padding: 0.9rem 1rem;
             border: 2px solid rgba(212, 175, 55, 0.3);
-            border-radius: 12px;
+            border-radius: 10px;
             background: rgba(255, 255, 255, 0.08);
             backdrop-filter: blur(10px);
             color: white;
             font-family: 'Poppins', sans-serif;
-            font-size: 0.95rem;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            font-size: 0.85rem;
+            transition: all 0.4s ease;
         }
         
         input::placeholder, textarea::placeholder {
@@ -685,13 +603,11 @@
             outline: none;
             border-color: var(--accent);
             background: rgba(255, 255, 255, 0.12);
-            box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.1),
-                        0 10px 30px rgba(212, 175, 55, 0.2);
-            transform: translateY(-2px);
+            box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.1);
         }
         
         textarea {
-            min-height: 150px;
+            min-height: 120px;
             resize: vertical;
         }
         
@@ -712,38 +628,18 @@
         .submit-btn {
             background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
             color: var(--primary);
-            padding: 1.2rem 3rem;
+            padding: 1rem 2.5rem;
             border: none;
             border-radius: 50px;
-            font-size: 1rem;
+            font-size: 0.9rem;
             font-weight: 700;
             cursor: pointer;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transition: all 0.4s ease;
             text-transform: uppercase;
             letter-spacing: 2px;
             margin-top: 1.5rem;
-            position: relative;
-            overflow: hidden;
             box-shadow: 0 15px 40px rgba(212, 175, 55, 0.3);
             width: 100%;
-        }
-        
-        .submit-btn::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 0;
-            height: 0;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.4);
-            transition: width 0.6s, height 0.6s, top 0.6s, left 0.6s;
-            transform: translate(-50%, -50%);
-        }
-        
-        .submit-btn:hover::before {
-            width: 500px;
-            height: 500px;
         }
         
         .submit-btn:hover {
@@ -751,21 +647,17 @@
             box-shadow: 0 25px 60px rgba(212, 175, 55, 0.5);
         }
         
-        .submit-btn:active {
-            transform: translateY(-2px);
-        }
-        
         /* Success Message */
         .success-message {
             display: none;
             background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
             color: white;
-            padding: 1.5rem;
-            border-radius: 15px;
+            padding: 1.2rem;
+            border-radius: 12px;
             margin-top: 1.5rem;
             text-align: center;
             font-weight: 600;
-            font-size: 0.9rem;
+            font-size: 0.8rem;
             box-shadow: 0 10px 40px rgba(40, 167, 69, 0.3);
         }
         
@@ -790,9 +682,8 @@
             background: var(--primary);
             color: white;
             text-align: center;
-            padding: 2.5rem 1.5rem;
-            margin-top: 4rem;
-            position: relative;
+            padding: 2rem 1.5rem;
+            margin-top: 3rem;
         }
         
         .footer-content {
@@ -803,183 +694,186 @@
         .footer-contact {
             display: flex;
             flex-direction: column;
-            gap: 1.5rem;
-            margin-bottom: 2rem;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
         }
         
         .footer-item {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 0.8rem;
+            gap: 0.6rem;
             transition: all 0.3s ease;
+            font-size: 0.85rem;
         }
         
         .footer-item:hover {
-            transform: translateY(-3px);
             color: var(--accent);
         }
         
         .footer-icon {
-            font-size: 1.3rem;
+            font-size: 1.1rem;
         }
         
         footer p {
             color: rgba(255, 255, 255, 0.6);
-            margin-top: 2rem;
-            font-size: 0.8rem;
+            margin-top: 1.5rem;
+            font-size: 0.75rem;
         }
         
-        /* Desktop Adjustments */
-        @media (min-width: 768px) {
-            body {
-                padding-bottom: 0;
-            }
-            
-            nav {
-                position: sticky;
-                top: 0;
-                bottom: auto;
-            }
-            
-            nav ul {
-                justify-content: center;
-                max-width: 1200px;
-                margin: 0 auto;
-            }
-            
-            nav li {
-                flex: initial;
-            }
-            
-            nav a {
-                flex-direction: row;
-                padding: 1.5rem 2rem;
-                font-size: 1rem;
-            }
-            
-            nav a .nav-icon {
-                display: none;
-            }
-            
+        /* Tablet Adjustments */
+        @media (min-width: 600px) {
             .stats-section {
                 grid-template-columns: repeat(4, 1fr);
-                gap: 2rem;
-            }
-            
-            .stat-card {
-                padding: 3rem 2rem;
-            }
-            
-            .stat-icon {
-                font-size: 3.5rem;
-            }
-            
-            .stat-number {
-                font-size: 3rem;
-            }
-            
-            .stat-label {
-                font-size: 1.1rem;
-            }
-            
-            .container {
-                padding: 6rem 2rem;
-            }
-            
-            .about-section,
-            .contact-section {
-                padding: 5rem;
-            }
-            
-            .section-title {
-                font-size: 3.5rem;
-            }
-            
-            .profile-grid {
-                grid-template-columns: 400px 1fr;
-                gap: 4rem;
-            }
-            
-            .profile-image {
-                font-size: 6rem;
-            }
-            
-            .profile-details h3 {
-                font-size: 2.5rem;
-            }
-            
-            .credentials {
-                font-size: 1.2rem;
-            }
-            
-            .bio p {
-                font-size: 1.05rem;
-            }
-            
-            .expertise h4 {
-                font-size: 1.8rem;
             }
             
             .expertise-grid {
-                grid-template-columns: repeat(4, 1fr);
-                gap: 1.5rem;
-            }
-            
-            .expertise-card {
-                padding: 2rem;
-            }
-            
-            .expertise-icon {
-                font-size: 2.5rem;
-            }
-            
-            .expertise-title {
-                font-size: 1.1rem;
+                grid-template-columns: repeat(2, 1fr);
             }
             
             .form-grid {
                 grid-template-columns: repeat(2, 1fr);
-                gap: 2rem;
+            }
+        }
+        
+        /* Desktop Adjustments */
+        @media (min-width: 768px) {
+            h1 {
+                font-size: 3.5rem;
             }
             
-            label {
+            .hero-subtitle {
+                font-size: 1.3rem;
+            }
+            
+            .stat-card {
+                padding: 2.5rem 1.5rem;
+            }
+            
+            .stat-icon {
+                font-size: 3rem;
+            }
+            
+            .stat-number {
+                font-size: 2.5rem;
+            }
+            
+            .stat-label {
+                font-size: 0.9rem;
+            }
+            
+            .container {
+                padding: 5rem 2rem;
+            }
+            
+            .about-section,
+            .contact-section {
+                padding: 4rem 3rem;
+            }
+            
+            .section-title {
+                font-size: 3rem;
+            }
+            
+            .profile-grid {
+                grid-template-columns: 350px 1fr;
+                gap: 3rem;
+            }
+            
+            .profile-image {
+                font-size: 5rem;
+            }
+            
+            .profile-details h3 {
+                font-size: 2.2rem;
+            }
+            
+            .credentials {
+                font-size: 1rem;
+            }
+            
+            .bio p {
+                font-size: 1rem;
+            }
+            
+            .expertise h4 {
+                font-size: 1.6rem;
+            }
+            
+            .expertise-grid {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 1.2rem;
+            }
+            
+            .expertise-card {
+                padding: 1.8rem 1.2rem;
+            }
+            
+            .expertise-icon {
+                font-size: 2.2rem;
+            }
+            
+            .expertise-title {
                 font-size: 0.95rem;
             }
             
             input, textarea, select {
-                padding: 1.2rem 1.5rem;
-                font-size: 1rem;
+                padding: 1.1rem 1.3rem;
+                font-size: 0.95rem;
             }
             
             textarea {
-                min-height: 180px;
+                min-height: 150px;
             }
             
             .submit-btn {
-                padding: 1.5rem 4rem;
-                font-size: 1.2rem;
+                padding: 1.3rem 3.5rem;
+                font-size: 1rem;
                 width: auto;
             }
             
             .footer-contact {
                 flex-direction: row;
-                justify-content: center;
-                gap: 3rem;
+                gap: 2.5rem;
             }
             
-            footer p {
-                font-size: 0.9rem;
+            .footer-item {
+                font-size: 0.95rem;
             }
         }
         
-        @media (min-width: 1024px) {
-            h1 {
-                font-size: 4.5rem;
+        /* Mobile Menu Styles */
+        @media (max-width: 767px) {
+            .menu-toggle {
+                display: flex;
             }
             
-            .hero-subtitle {
-                font-size: 1.4rem;
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 70px);
+                background: rgba(10, 22, 40, 0.98);
+                flex-direction: column;
+                padding: 2rem;
+                gap: 0;
+                transition: left 0.3s ease;
+            }
+            
+            .nav-links.active {
+                left: 0;
+            }
+            
+            .nav-links li {
+                width: 100%;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            }
+            
+            .nav-links a {
+                display: block;
+                padding: 1.2rem;
+                width: 100%;
             }
         }
     </style>
@@ -988,15 +882,32 @@
     <!-- Animated Background -->
     <div class="particles" id="particles"></div>
     
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="logo">Asian St⭐r Law Firm</div>
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about">About</a></li>
+                <li><a href="#expertise">Practice Areas</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    
     <!-- Hero Header -->
     <header>
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <div class="hero-badge">Trusted Legal Counsel</div>
+            <div class="hero-badge">Asian St⭐r Law Firm</div>
             <div class="scales-icon">⚖️</div>
-            <h1>Advocate [Your Father's Name]</h1>
-            <p class="hero-subtitle">Defending Rights | Delivering Justice | Dedicated Excellence</p>
-            <p class="hero-tagline">Your Legal Guardian</p>
+            <h1>Muhammad Ashraf Qureshi</h1>
+            <p class="hero-subtitle">Senior Civil Judge (R) | Ph.D Law Scholar (IIU)</p>
+            <p class="hero-tagline">Advocate Supreme Court, High Courts</p>
             <div class="hero-cta">
                 <a href="#contact" class="cta-button">Schedule Consultation</a>
             </div>
@@ -1004,26 +915,17 @@
         <div class="scroll-indicator"></div>
     </header>
     
-    <!-- Bottom Navigation (Mobile) / Top Navigation (Desktop) -->
-    <nav id="navbar">
-        <ul>
-            <li><a href="#about" class="active"><span class="nav-icon">👤</span>About</a></li>
-            <li><a href="#expertise"><span class="nav-icon">⚖️</span>Practice Areas</a></li>
-            <li><a href="#contact"><span class="nav-icon">📞</span>Contact</a></li>
-        </ul>
-    </nav>
-    
     <div class="container">
         <!-- Stats Section -->
         <div class="stats-section">
             <div class="stat-card">
                 <div class="stat-icon">📅</div>
-                <div class="stat-number">15+</div>
+                <div class="stat-number">25+</div>
                 <div class="stat-label">Years Experience</div>
             </div>
             <div class="stat-card">
                 <div class="stat-icon">⚖️</div>
-                <div class="stat-number">500+</div>
+                <div class="stat-number">800+</div>
                 <div class="stat-label">Cases Won</div>
             </div>
             <div class="stat-card">
@@ -1033,7 +935,7 @@
             </div>
             <div class="stat-card">
                 <div class="stat-icon">😊</div>
-                <div class="stat-number">1000+</div>
+                <div class="stat-number">1500+</div>
                 <div class="stat-label">Happy Clients</div>
             </div>
         </div>
@@ -1042,28 +944,27 @@
         <section id="about" class="about-section">
             <div class="section-header">
                 <div class="section-subtitle">Meet Your Legal Expert</div>
-                <h2 class="section-title">About Advocate [Name]</h2>
+                <h2 class="section-title">About Advocate Muhammad Ashraf Qureshi</h2>
             </div>
             
             <div class="profile-grid">
                 <div class="profile-image-wrapper">
                     <div class="profile-badge">⭐ Senior Advocate</div>
                     <div class="profile-image">
-                        👨‍⚖️
-                        <!-- Replace with: <img src="your-father-photo.jpg" alt="Advocate Name" style="width: 100%; height: 100%; object-fit: cover;"> -->
+                        <img src="profile-photo.jpg" alt="Muhammad Ashraf Qureshi" style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px;">
                     </div>
                 </div>
                 
                 <div class="profile-details">
-                    <h3>Advocate [Full Name]</h3>
-                    <p class="credentials">LLB | [Bar Council Registration] | [Years] Years of Excellence</p>
+                    <h3>Muhammad Ashraf Qureshi</h3>
+                    <p class="credentials">Senior Civil Judge (Retd.) | Ph.D Law Scholar (IIU) | Advocate Supreme Court, High Courts</p>
                     
                     <div class="bio">
-                        <p>A distinguished legal professional with over [X] years of unwavering commitment to justice and client advocacy. Admitted to the [Bar Council Name], Advocate [Name] has built an exceptional reputation for delivering results in the most challenging cases.</p>
+                        <p>A distinguished legal professional with over 25 years of unwavering commitment to justice and client advocacy. As a Senior Civil Judge (Retd.) and Advocate of the Supreme Court and High Courts, Mr. Qureshi has built an exceptional reputation for delivering results in the most challenging cases.</p>
                         
-                        <p>With a deep understanding of both procedural and substantive law, coupled with strategic litigation skills, he has successfully represented clients across [mention courts - District, High Court, Supreme Court]. His approach combines thorough legal research, persuasive advocacy, and genuine care for client welfare.</p>
+                        <p>Currently pursuing Ph.D. in Law from the International Islamic University, he combines academic excellence with practical expertise. His unique background as a former judge provides invaluable insights into the judicial process, enabling him to craft strategies that achieve optimal outcomes for clients.</p>
                         
-                        <p>Recognized for his integrity, dedication, and outstanding courtroom performance, Advocate [Name] continues to set benchmarks in legal excellence, earning the trust of clients and respect of peers throughout his distinguished career.</p>
+                        <p>With chambers located in Haroon Block, Near PSO Pump, F-8 Markaz, Islamabad, Advocate Qureshi continues to set benchmarks in legal excellence, earning the trust of clients and respect of peers throughout his distinguished career. His practice is built on a foundation of integrity, dedication, and outstanding legal acumen.</p>
                     </div>
                 </div>
             </div>
@@ -1102,12 +1003,12 @@
                     <div class="expertise-title">Contract Law</div>
                 </div>
                 <div class="expertise-card">
-                    <span class="expertise-icon">💼</span>
-                    <div class="expertise-title">Labor & Employment</div>
+                    <span class="expertise-icon">📋</span>
+                    <div class="expertise-title">Administrative Law</div>
                 </div>
                 <div class="expertise-card">
-                    <span class="expertise-icon">🔍</span>
-                    <div class="expertise-title">Consumer Protection</div>
+                    <span class="expertise-icon">🏛️</span>
+                    <div class="expertise-title">Constitutional Law</div>
                 </div>
             </div>
         </section>
@@ -1147,8 +1048,8 @@
                                 <option value="family">Family Law</option>
                                 <option value="property">Property Law</option>
                                 <option value="contract">Contract Law</option>
-                                <option value="labor">Labor & Employment</option>
-                                <option value="consumer">Consumer Protection</option>
+                                <option value="administrative">Administrative Law</option>
+                                <option value="constitutional">Constitutional Law</option>
                                 <option value="other">Other</option>
                             </select>
                         </div>
@@ -1189,19 +1090,31 @@
             <div class="footer-contact">
                 <div class="footer-item">
                     <span class="footer-icon">📍</span>
-                    <span>[Office Address, City]</span>
+                    <span>Chamber No. 24, Haroon Block, Near PSO Pump, F-8 Markaz, Islamabad</span>
                 </div>
                 <div class="footer-item">
                     <span class="footer-icon">📞</span>
-                    <span>[Phone Number]</span>
+                    <span>0300-8303429 / 0355-7601232</span>
                 </div>
                 <div class="footer-item">
                     <span class="footer-icon">✉️</span>
-                    <span>[Email Address]</span>
+                    <span>ashrafqureshi83@gmail.com</span>
                 </div>
             </div>
-            <p>&copy; 2026 Advocate [Your Father's Name]. All Rights Reserved. | Professional Legal Services</p>
-        </footer-content>
+            <p>&copy; 2026 Asian Star Law Firm - Muhammad Ashraf Qureshi. All Rights Reserved. | Professional Legal Services</p>
+            
+            <div style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(255, 255, 255, 0.1);">
+                <p style="font-size: 0.8rem; color: rgba(255, 255, 255, 0.5); margin: 0 0 0.8rem 0;">Made by</p>
+                <div style="display: flex; flex-direction: column; gap: 0.5rem; align-items: center;">
+                    <a href="mailto:ubaidashraf997@gmail.com" style="color: var(--accent); text-decoration: none; font-size: 0.85rem; transition: all 0.3s ease;">
+                        ✉️ ubaidashraf997@gmail.com
+                    </a>
+                    <a href="tel:+923426399458" style="color: var(--accent); text-decoration: none; font-size: 0.85rem; transition: all 0.3s ease;">
+                        📞 03426399458
+                    </a>
+                </div>
+            </div>
+        </div>
     </footer>
     
     <script>
@@ -1222,6 +1135,21 @@
         
         createParticles();
         
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navLinks');
+        
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+        
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+        
         // Smooth scrolling for navigation
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -1230,35 +1158,19 @@
                 if (targetId === '#') return;
                 
                 const targetSection = document.querySelector(targetId);
-                const navHeight = window.innerWidth < 768 ? 0 : document.querySelector('nav').offsetHeight;
+                const navHeight = document.querySelector('nav').offsetHeight;
                 const targetPosition = targetSection.offsetTop - navHeight;
                 
                 window.scrollTo({
                     top: targetPosition,
                     behavior: 'smooth'
                 });
-                
-                // Update active nav
-                document.querySelectorAll('nav a').forEach(link => link.classList.remove('active'));
-                this.classList.add('active');
             });
         });
         
-        // Navbar scroll effect (desktop only)
-        if (window.innerWidth >= 768) {
-            const navbar = document.getElementById('navbar');
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 100) {
-                    navbar.classList.add('scrolled');
-                } else {
-                    navbar.classList.remove('scrolled');
-                }
-            });
-        }
-        
         // Active section detection
         const sections = document.querySelectorAll('section[id]');
-        const navLinks = document.querySelectorAll('nav a[href^="#"]');
+        const navLinksItems = document.querySelectorAll('nav a[href^="#"]');
         
         window.addEventListener('scroll', () => {
             let current = '';
@@ -1270,7 +1182,7 @@
                 }
             });
             
-            navLinks.forEach(link => {
+            navLinksItems.forEach(link => {
                 link.classList.remove('active');
                 if (link.getAttribute('href') === `#${current}`) {
                     link.classList.add('active');
